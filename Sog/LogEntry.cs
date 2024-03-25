@@ -1,6 +1,7 @@
 namespace Sog {
     public enum LogLevel {
         Unknown,
+        Print,
         Debug,
         Info,
         Warning,

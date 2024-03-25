@@ -39,8 +39,8 @@ namespace Sog {
         public void Flush() {
             while (queue.Count > 0) {
                 var entry = queue.Dequeue();
-                // TODO: actually log stuff
-                Console.WriteLine($"[{entry.Timestamp}][{entry.Level}]: {entry.Message}");
+                var text = $"[{entry.Timestamp}][{entry.Level}]: {entry.Message}";
+                writer.WriteLine(text);
             }
         }
     }
