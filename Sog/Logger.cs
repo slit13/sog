@@ -36,6 +36,30 @@ namespace Sog {
             });
         }
 
+        public void Print(string message) {
+            Log(message, LogLevel.Print);
+        }
+
+        public void Debug(string message) {
+            Log(message, LogLevel.Debug);
+        }
+
+        public void Info(string message) {
+            Log(message, LogLevel.Info);
+        }
+
+        public void Warning(string message) {
+            Log(message, LogLevel.Warning);
+        }
+
+        public void Error(string message) {
+            Log(message, LogLevel.Error);
+        }
+
+        public void Fatal(string message) {
+            Log(message, LogLevel.Fatal);
+        }
+
         public void Flush() {
             while (queue.Count > 0) {
                 var entry = queue.Dequeue();
